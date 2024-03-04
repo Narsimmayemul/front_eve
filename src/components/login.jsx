@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import { Navigate } from "react-router-dom"
+
 
 const Login = () => {
 
@@ -21,6 +23,7 @@ const Login = () => {
             console.log(res)
             const token = res.token;
             localStorage.setItem("mernapptoken", token)
+            
         })
         .catch((err) => console.log(err))
     }
