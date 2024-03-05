@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+
 const Home = () => {
     const [data, setData] = useState([]);
     const [_id, set_ID] = useState(0);
@@ -14,6 +15,16 @@ const [category1, setCategory1] = useState("");
     const [date1, setDate1] = useState("");
     
     const url = 'https://dull-blue-wildebeest-gear.cyclic.app/';
+
+    const handle_login=()=>{
+        
+    }
+
+    const handle_signup=()=>{
+
+    }
+    
+
 
 const handle_Update=(e)=>{
     const data = e;
@@ -107,7 +118,9 @@ const handle_Delete= async(od)=>{
   return (
     <>
         <h1>Data Only Visible After Login</h1>
-    <div style={{display:'flex' , justifyContent:'center' , gap:"15px"}}>
+        <button onClick={handle_login}>Login</button>
+        <button onClick={handle_signup}>SignUp</button>
+    <div style={{display:'flex' , justifyContent:'center' , gap:"15px" , marginTop:'50px'}}>
       {
         data?.map((e)=>(
         <div style={{border:'1px solid red' , padding:"10px"}} key={e._id}>
@@ -137,6 +150,8 @@ const handle_Delete= async(od)=>{
                 <input type="text" placeholder='date'   value={date1} onChange={(e) =>         setDate1(e.target.value)} />
                 <button  onClick={ADD_Fun}>Add</button>
             </div>
+
+            
     </>
   )
 }
