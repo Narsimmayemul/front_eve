@@ -118,8 +118,8 @@ const handle_Delete= async(od)=>{
   return (
     <>
         <h1>Data Only Visible After Login</h1>
-        <button onClick={handle_login}>Login</button>
-        <button onClick={handle_signup}>SignUp</button>
+        <button style={{border:'none' , background:"white"}} onClick={handle_login} >For Login Visit "/login"</button>
+        <button style={{border:'none' , background:"white"}} onClick={handle_signup}>For SignUp Visit "/signup"</button>
     <div style={{display:'flex' , justifyContent:'center' , gap:"15px" , marginTop:'50px'}}>
       {
         data?.map((e)=>(
